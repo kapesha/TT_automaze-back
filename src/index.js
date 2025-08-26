@@ -1,3 +1,6 @@
 import { createServer } from "./createServer.js";
+import 'dotenv/config';
 
-createServer().listen(3000, () => { })
+const {POSTGRES_PORT} = process.env;
+
+createServer().listen(POSTGRES_PORT, () => { })
